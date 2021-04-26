@@ -8,6 +8,15 @@
 
 require "UnLua"
 
+package.cpath = "C:/Lua/luasocket/win/x64/?.dll;" .. package.cpath
+local path = package.cpath
+print(path)
+
+
+require("LuaPanda").start("127.0.0.1",8818)
+
+
+
 local UnLuaGameMode_C = Class()
 
 --function UnLuaGameMode_C:Initialize(Initializer)
