@@ -8,6 +8,14 @@
 #include "UObject/Object.h"
 #include "Object1.generated.h"
 
+
+USTRUCT(BlueprintType)
+struct FNameStruct
+{
+	GENERATED_USTRUCT_BODY()
+	UPROPERTY(BlueprintReadWrite)
+	FString Name;
+};
 /**
  * 
  */
@@ -69,6 +77,10 @@ public:
 	void Hello2(const FString Message);
 	UFUNCTION()
 	int Hello3(const FString Message);
+	UFUNCTION()
+	static void GetFString(FString Name, FString& OutName);
+	UFUNCTION()
+	static void GetStruct(FNameStruct& NameStruct);
 
 	FNoParamDelegate TestNoParamDelegate;
 	FOneParamDelegate TestOneParamDelegate;

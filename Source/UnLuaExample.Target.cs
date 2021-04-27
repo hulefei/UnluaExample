@@ -9,6 +9,7 @@ public class UnLuaExampleTarget : TargetRules
 	{
 		Type = TargetType.Game;
 		DefaultBuildSettings = BuildSettingsVersion.V2;
-		ExtraModuleNames.AddRange( new string[] { "UnLuaExample" } );
+		ExtraModuleNames.AddRange( new string[] { "UnLuaExample", "UnLua" } );
 	}
+	
 }

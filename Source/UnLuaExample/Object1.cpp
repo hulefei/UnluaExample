@@ -23,3 +23,13 @@ int UObject1::Hello3(const FString Message)
 	UE_LOG(LogTemp, Log, TEXT("%s[%s]"), ANSI_TO_TCHAR(__FUNCTION__), *Message);
 	return 100;
 }
+
+void UObject1::GetFString(FString Name, FString& OutName)
+{
+	OutName = "Hello " + Name;
+}
+
+void UObject1::GetStruct(FNameStruct& NameStruct)
+{
+	NameStruct.Name = TEXT("icewolf");
+}
