@@ -73,9 +73,9 @@ function BP_Actor1_C:ReceiveBeginPlay()
     -- local NewCube = World:SpawnActor(CubeClass, self:GetTransform(), UE4.ESpawnActorCollisionHandlingMethod.AlwaysSpawn, self, self, "Blueprints.BP_Cube_C")
 
     -- load UClass
-    -- local WBP_UI1 = UE4.UClass.Load("/Game/Blueprints/WBP_UI1")
-    -- local Widget = UE4.UWidgetBlueprintLibrary.Create(self, WBP_UI1)
-    -- Widget:AddToViewport()
+    local WBP_UI1 = UE4.UClass.Load("/Game/Blueprints/WBP_UI1.WBP_UI1_C")
+    local Widget = UE4.UWidgetBlueprintLibrary.Create(self, WBP_UI1)
+    Widget:AddToViewport()
 
     -- 代码中创建object -----------------------------------------------------------------
     -- local Object1 = UE4.UObject1.GetInstance()
@@ -122,9 +122,11 @@ function BP_Actor1_C:ReceiveBeginPlay()
     -- UE4.UObject1.GetStruct(ValueName)
     -- print(ValueName.Name)
 
-    --Delay -----------------------------------------------------------------------------------------------------------
-    self:DelayFunc(1.0)
-    UE4.UKismetSystemLibrary.PrintString(self,"111111")
+    -- Delay -----------------------------------------------------------------------------------------------------------
+    -- self:DelayFunc(2.0)
+    -- UE4.UKismetSystemLibrary.PrintString(self,"111111")
+
+
 
 end
 
